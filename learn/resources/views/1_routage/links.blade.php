@@ -75,6 +75,14 @@
       <li><a href="{{route('subordinates',['id'=>1])}}">subordinates</a></li>
       <li><a href="{{route('subordinateDetails',['id'=>1 , 'subordinateId' => 1])}}">subordinateDetails</a></li>
    </ul>
-</body>
+</body> 
+<!-- <body>
+    <h1>Links to Employee Pages</h1>
+   <ul>
+      <li><a href="{{route('employee')}}">employee</a></li>
+      <li><a href="{{route('subordinates',['id'=>1])}}">subordinates</a></li>
+      <li><a href="{{route('subordinateDetails',['id'=>1 , 'subordinateId' => 1])}}">subordinateDetails</a></li>
+   </ul>
+</body> -->
 </html>
 l

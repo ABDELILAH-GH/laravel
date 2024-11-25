@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details du Subordonne</title>
+    <title>Liste des Employees</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,11 @@
         h1 {
             color: #333;
         }
-        p {
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
             margin: 10px 0;
         }
         a {
@@ -26,10 +30,15 @@
     </style>
 </head>
 <body>
-    <h1>Details du Subordonne</h1>
-    <p><strong>Nom :</strong> {{ $subordinate['prenom'] }} {{ $subordinate['nom'] }}</p>
-    <p><strong>Poste :</strong> {{ $subordinate['poste'] }}</p>
-
-    <br>
+    <h1>Liste des Employees</h1>
+    <ul>
+        @foreach ($employees as $employee)
+            <li>
+                <a href="{{ route('employee', ['id' => $employee['id']]) }}">
+                    {{ $employee['prenom'] }} {{ $employee['nom'] }} (ID: {{ $employee['id'] }})
+                </a>
+            </li>
+        @endforeach
+    </ul>
 </body>
 </html>

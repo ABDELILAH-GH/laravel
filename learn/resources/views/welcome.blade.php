@@ -6,4 +6,5 @@
     height: 20vh;
 }
 </style>
-<h1 class="h1">Hello coders </h1>
+<h1 class="h1">Hello <?php  echo $nom ." ".$prenom?></h1>
+
