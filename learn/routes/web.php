@@ -71,9 +71,6 @@ Route::get('/employee/{id}/subordinates', function ($id) use ($employees) {
             'employee' => $employee
         ]);
     }
-    return view('1_routage.notFound', [
-        'message' => 'Employé introuvable.'
-    ]);
 })->name('subordinates');
 
 
@@ -89,9 +86,7 @@ Route::get('/employee/{id}/subordinates/{subordinateId}', function ($id, $subord
             }
         }
     }
-    return view('1_routage.notFound', [
-        'message' => 'Subordonné introuvable.'
-    ]);
+
 })->name('subordinateDetails');
 
 
